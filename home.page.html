@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Adivinhe o Animal</ion-card-title>
+      <p>{{opcaoAnimais}}</p>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>O seu animal tem ou é: {{caractAleat}}</ion-label>
+      <ion-item>
+        <ion-input placeholder="Responda apenas com sim ou não:" [(ngModel)]="resposta"></ion-input>
+      </ion-item>
+      <ion-button (click)="getRandomAnimal()">Começar</ion-button>
+      <ion-button (click)="verificarCaract()">Enviar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
